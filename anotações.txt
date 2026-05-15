@@ -44,7 +44,7 @@ ou: ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 - git init: Cria um repositório Git na pasta em que está situado.
 
-- git add: adiciona os arquivos do projeto a uma área temporária, você
+- git add: adiciona os arquivos do projeto a uma área temporária (stage), você
 pode escolher quais arquivos irão ser adicionados ou adicionar um .
 para adicionar todos os arquivos do projeto.
 
@@ -54,3 +54,13 @@ para adicionar todos os arquivos do projeto.
 
 - git push -u origin main: envia o arquivo para o repositório remoto
 utilizando o main como origem do commit (Necessário apenas no primeiro push).
+
+- git log: verifica o histórico de versões.
+
+- git log --oneline: verifica o histório de versões de forma resumida.
+
+- Explicação dos status do git status:
+1 - Modified: Quer dizer que o arquivo foi modificado;
+2 - Untracked: Quer dizer que o arquivo ainda não foi adicionado ao repositório;
+3 - Deleted: Quer dizer que o arquivo foi deletado.
+
