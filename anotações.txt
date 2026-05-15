@@ -100,3 +100,42 @@ tipicamente salvam uma subpasta "nome_modules" na pasta do seu projeto.
 configuração na pasta do projeto (exemplo: .vscode).
 4 - Arquivos de configuração do seu sistema: Por exemplo, sistemas Mac podem gravar uma subpasta
 .ds_store na pasta do projeto. 
+
+- Ações que podem abrir o editor VIM:
+1 - Fazer um commit sem mensagem;
+2 - Fazer um merge de três vias.
+
+- Comandos:
+1 - i: Habilitar o modo de edição;
+2 - <ESC> | :wq | <ENTER>: Sair do VIM, salvando as alterações (w = write | q = quit);
+3 - <ESC> | :q! | <ENTER>: Sair do VIM, descartando as alterações.
+
+- git reset --soft HEAD~1: Desfaz um comit mantendo as modificações nos arquivos.
+
+- git reset --hard <código do commit>: Volta o projeto ao estado de um dado commit 
+(deleta commits e alterações posteriores a esse commit). -> Ação destrutiva!
+
+- git reset --hard HEAD~1: Volta o projeto ao estado do penúltimo commit. -> Ação destrutiva!
+
+- git pull <nome do remote> <nome do branch>: atualiza o repositório local em relação ao remoto
+
+- Push rejeitado: Não é permitido enviar um push se seu repositório local está atrasado em relação
+ao histórico do repositório remoto, para resolver isso, é necessário utilizar um git pull para atualizar
+seu repositório local, esse pull é feito em ordem cronológica, então se os commits locais foram feitos
+após o remoto que está desincronizado, ele será incluído cronológicamente antes dos commits locais, e
+no fim será adicionado um commit de merge.
+
+- Conflito no pull: Ocorre quando há 2 históricos divergentes que sofreram alterações em arquivos iguais,
+para resolver, ao dar o pull, o sistema informará que ocorreu um conflito no(s) arquivo(s) e o bash te
+coloca em uma branch "MERGING" para resolver esse conflito, se for utilizado um git status, ele te
+mostrará qual arquivo entrou em conflito, e ao verificar o arquivo, você notará que há uma anotação
+feita pelo git mostrando oque estava no repositório remoto e a alteração que você fez no repositório
+local, para que seja feita a averiguação e correção do código, para finalmente fazer um novo commit e
+utilizar o git push.
+
+- git push -f(force) <nome do remote> <nome do branch>: Sobrescreve um histórico no Github. -> Ação 
+destrutiva!
+
+- git remote set-url origin SSH path: aponta o projeto para outro repositório remoto.
+
+- git remote -v: mostra para onde está sendo apontado o repositório remoto.
