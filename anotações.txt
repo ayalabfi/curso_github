@@ -1,0 +1,45 @@
+- Git - Um sistema de versionamento para controlar versões (chamadas 
+de commits) de projetos/documentos.
+
+- Github - Um serviço online de projetos gerenciados pelo Git.
+
+- Repositório remoto e local: Um projeto controlado pelo git é chamado 
+de repositório de versionamento.
+
+1 - Repositório remoto: Tipicamente uma cópia "oficial" do repositório
+fica salvo em um servidor.
+
+2 - Repositório local: Cada pesso que trabalha no projeto pode fazer 
+uma cópia do repositório para seu computador (repositório local). 
+A pessoa então faz suas alterações no projeto (novos commits) e depois
+salva as alterações no servidor.
+
+- git pull e git clone: ambos servem para trazer o projeto remoto para seu
+computador, mas são utilizados de formas singulares:
+
+1 - git clone: utilizado quando você quer clonar o repositório e iniciar suas
+atualizações no projeto.
+
+2 - git pull: utilizando quando você já tem seu repositório local e quer
+atualiza-lo com as novas informações que estão no repositório remoto.
+
+- commit: O método utilizado no git para salvar seu projeto.
+
+- git push: utilizado para enviar seus commits para o repositório remoto.
+
+- Configurar chave SSH para o Github:
+
+1 - SSH é um protocolo para comunicação de dados com segurança;
+
+2 - O Github aboliu a autenticação somente com usuário e senha;
+
+3 - A ideia básica é cadastrar previamente quais computadores podem
+acessar o Github em seu nome. Outros computadores não conseguem acessar;
+
+4 - Para isso você deve:
+4.1 - Gerar uma chave SSH no seu computador (rode os comandos pelo Git Bash);
+Comando: ssh-keygen -t ed25519 -C "your_email@example.com"
+ou: ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+4.2 - Cadastrar essa chave no seu Github.
+
+- git init:
