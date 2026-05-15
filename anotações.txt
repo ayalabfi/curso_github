@@ -75,8 +75,28 @@ de um dado commit ou branch.
 3 - É possível referenciar um commit N versões antes de HEAD usando ~N, por exemplo:
 3.1 - HEAD~1 (penúltimo commit);
 3.2 - HEAD~2 (antepenúltimo commit).
+
 Importante: antes de fazer o checkout para voltar para HEAD, certifique-se de que não haja
 mudanças nos arquivos. Se você acidentalmente mudou alguma coisa, desfaça as modificações usando:
-1 - git reset;
-2 - git clean -df;
-3 - git checkout -- .;
+
+1 - git reset: limpa qualquer inclusão feita no git add;
+2 - git clean -df: remove arquivos e diretórios não rastreados (untracked) do seu repositório;
+3 - git checkout -- .: Limpa todas as alterações do commit que você está.
+
+- git checkout nomeDoBranch: Vai pro último commit do branch selecionado.
+
+- Arquivo .gitignore: É um arquivo que indica o que não deve ser salvo pelo Git.
+Geralmente o arquivo .gitignore fica salvo na pasta principal do repositório. Mas também
+é possível salvar outros arquivos .gitignore em subpastas do repositório, para indicar o que
+deve ser ignorado por cada subpasta.
+
+- Casos comuns e arquivos que não devem ser salvos pelo Git:
+1 - Arquivos compilados: Lungiagens compiladas (C, C++, Java, C#, etc.) geram arquivos de
+código compilado para executar o programa localmente.
+2 - Arquivos de bibliotecas externas usadas no projeto: Projetos reais utilizam bibliotecas
+externas (programas prontos disponíveis na internet). Por exemplo, projetos JavaScript com NPM
+tipicamente salvam uma subpasta "nome_modules" na pasta do seu projeto.
+3 - Arquivos de configuração da sua IDE: IDE's podem salvar uma subpasta com arquivos de 
+configuração na pasta do projeto (exemplo: .vscode).
+4 - Arquivos de configuração do seu sistema: Por exemplo, sistemas Mac podem gravar uma subpasta
+.ds_store na pasta do projeto. 
