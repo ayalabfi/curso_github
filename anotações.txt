@@ -23,7 +23,7 @@ atualizações no projeto.
 2 - git pull: utilizando quando você já tem seu repositório local e quer
 atualiza-lo com as novas informações que estão no repositório remoto.
 
-- commit: O método utilizado no git para salvar seu projeto.
+- git commit -m "mensagem": O método utilizado no git para salvar seu projeto.
 
 - git push: utilizado para enviar seus commits para o repositório remoto.
 
@@ -42,4 +42,15 @@ Comando: ssh-keygen -t ed25519 -C "your_email@example.com"
 ou: ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 4.2 - Cadastrar essa chave no seu Github.
 
-- git init:
+- git init: Cria um repositório Git na pasta em que está situado.
+
+- git add: adiciona os arquivos do projeto a uma área temporária, você
+pode escolher quais arquivos irão ser adicionados ou adicionar um .
+para adicionar todos os arquivos do projeto.
+
+- git status: verifica se tem algo a ser salvo.
+
+- git branch -M main: Altera o operador para main
+
+- git push -u origin main: envia o arquivo para o repositório remoto
+utilizando o main como origem do commit.
