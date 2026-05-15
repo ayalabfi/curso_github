@@ -64,3 +64,19 @@ utilizando o main como origem do commit (Necessário apenas no primeiro push).
 2 - Untracked: Quer dizer que o arquivo ainda não foi adicionado ao repositório;
 3 - Deleted: Quer dizer que o arquivo foi deletado.
 
+- git diff: Comando que mostra a diferença entre arquivos modificados.
+
+- git checkout: Permite modificar temporariamente os arquivos do projeto ao estado
+de um dado commit ou branch.
+
+- Código do commit, HEAD:
+1 - Cada commit possui um código que pode ser utilizado para referenciar o commit;
+2 - O último commit do histórico do branch corrente também pode ser referenciado pela palavra HEAD
+3 - É possível referenciar um commit N versões antes de HEAD usando ~N, por exemplo:
+3.1 - HEAD~1 (penúltimo commit);
+3.2 - HEAD~2 (antepenúltimo commit).
+Importante: antes de fazer o checkout para voltar para HEAD, certifique-se de que não haja
+mudanças nos arquivos. Se você acidentalmente mudou alguma coisa, desfaça as modificações usando:
+1 - git reset;
+2 - git clean -df;
+3 - git checkout -- .;
