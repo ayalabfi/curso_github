@@ -53,4 +53,4 @@ para adicionar todos os arquivos do projeto.
 - git branch -M main: Altera o operador para main
 
 - git push -u origin main: envia o arquivo para o repositório remoto
-utilizando o main como origem do commit.
+utilizando o main como origem do commit (Necessário apenas no primeiro push).
